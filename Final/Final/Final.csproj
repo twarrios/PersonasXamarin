@@ -1,0 +1,69 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard1.4</TargetFramework>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <FileVersion>1.0.0.0</FileVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="4.8.1" />
+    <PackageReference Include="sqlite-net-pcl" Version="1.4.118" />
+    <PackageReference Include="Xamarin.Forms" Version="3.0.0.482510" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Windows.Foundation.UniversalApiContract">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Windows Kits\10\References\10.0.16299.0\Windows.Foundation.UniversalApiContract\5.0.0.0\Windows.Foundation.UniversalApiContract.winmd</HintPath>
+      <IsWinMDFile>true</IsWinMDFile>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Views\Personas\FicViCpRhCatPersonasPerfilesDetalle.xaml.cs">
+      <DependentUpon>FicViCpRhCatPersonasPerfilesDetalle.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Personas\FicViCpRhCatPersonasHomologadasDetalle.xaml.cs">
+      <DependentUpon>FicViCpRhCatPersonasHomologadasDetalle.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Personas\FicViCpRhCatPersonasDatosAdicionalesDetalle.xaml.cs">
+      <DependentUpon>FicViCpRhCatPersonasDatosAdicionalesDetalle.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Personas\FicViCpRhCatPersonasPerfilesItem.xaml.cs">
+      <DependentUpon>FicViCpRhCatPersonasPerfilesItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Personas\FicViCpRhCatPersonasHomologadasItem.xaml.cs">
+      <DependentUpon>FicViCpRhCatPersonasHomologadasItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Personas\FicViCpRhCatPersonasDatosAdicionalesItem.xaml.cs">
+      <DependentUpon>FicViCpRhCatPersonasDatosAdicionalesItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Personas\FicViCpRhCatPersonasPerfilesList.xaml.cs">
+      <DependentUpon>FicViCpRhCatPersonasPerfilesList.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Personas\FicViCpRhCatPersonasHomologadasList.xaml.cs">
+      <DependentUpon>FicViCpRhCatPersonasHomologadasList.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Personas\FicViCpRhCatPersonasDatosAdicionalesList.xaml.cs">
+      <DependentUpon>FicViCpRhCatPersonasDatosAdicionalesList.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Personas\FicViCpRhCatDomiciliosItem.xaml.cs">
+      <DependentUpon>FicViCpRhCatDomiciliosItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Personas\FicViCpRhCatDomiciliosDetalle.xaml.cs">
+      <DependentUpon>FicViCpRhCatDomiciliosDetalle.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Personas\FicViCpRhCatDirWebDetalle.xaml.cs">
+      <DependentUpon>FicViCpRhCatDirWebDetalle.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Personas\FicViCpRhCatDirWebItem.xaml.cs">
+      <DependentUpon>FicViCpRhCatDirWebItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Personas\FicViCpRhCatDomiciliosList.xaml.cs">
+      <DependentUpon>FicViCpRhCatDomiciliosList.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Personas\FicViCpRhCatDirWebList.xaml.cs">
+      <DependentUpon>FicViCpRhCatDirWebList.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+</Project>

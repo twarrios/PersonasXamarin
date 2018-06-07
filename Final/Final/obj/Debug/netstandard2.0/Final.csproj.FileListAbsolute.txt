@@ -1,0 +1,9 @@
+c:\users\twarrios\source\repos\Final\Final\Final\bin\Debug\netstandard2.0\Final.deps.json
+c:\users\twarrios\source\repos\Final\Final\Final\bin\Debug\netstandard2.0\Final.dll
+c:\users\twarrios\source\repos\Final\Final\Final\bin\Debug\netstandard2.0\Final.pdb
+c:\users\twarrios\source\repos\Final\Final\Final\obj\Debug\netstandard2.0\Final.csprojAssemblyReference.cache
+c:\users\twarrios\source\repos\Final\Final\Final\obj\Debug\netstandard2.0\Final.csproj.CoreCompileInputs.cache
+c:\users\twarrios\source\repos\Final\Final\Final\obj\Debug\netstandard2.0\Final.AssemblyInfoInputs.cache
+c:\users\twarrios\source\repos\Final\Final\Final\obj\Debug\netstandard2.0\Final.AssemblyInfo.cs
+c:\users\twarrios\source\repos\Final\Final\Final\obj\Debug\netstandard2.0\Final.dll
+c:\users\twarrios\source\repos\Final\Final\Final\obj\Debug\netstandard2.0\Final.pdb

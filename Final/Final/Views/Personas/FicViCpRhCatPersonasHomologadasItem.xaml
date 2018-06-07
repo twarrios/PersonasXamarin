@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Final.Views.Personas.FicViCpRhCatPersonasHomologadasItem">
+    <StackLayout
+        VerticalOptions="StartAndExpand"
+        Padding="20"
+        x:Name="stack">
+
+        <Label Text="IdPerona" IsVisible="False"/>
+        <Entry Text="{Binding Item.IdPersona}" IsVisible="False"/>
+
+        <Label Text="IdInstituto" />
+        <Entry Text="{Binding Item.IdInstituto}"/>
+
+        <Label Text="Numero de Control" />
+        <Entry Text="{Binding Item.NumControl}"/>
+
+        <Label Text="Nombre" />
+        <Entry Text="{Binding Item.Nombre}"/>
+
+        <Label Text="Apellido Paterno" />
+        <Entry Text="{Binding Item.ApPaterno}"/>
+
+        <Label Text="Apellido Materno" />
+        <Entry Text="{Binding Item.ApMaterno}"/>
+
+        <Label Text="RFC" />
+        <Entry Text="{Binding Item.RFC}"/>
+
+        <Label Text="CURP" />
+        <Entry Text="{Binding Item.CURP}"/>
+
+        <Label Text="FechaNac" />
+        <Entry Text="{Binding Item.FechaNac}"/>
+
+        <Label Text="TipoPersona" />
+        <Switch IsToggled="{Binding Item.TipoPerona}"/>
+
+        <Label Text="Sexo" />
+        <Switch IsToggled="{Binding Item.Sexo}"/>
+
+        <Label Text="RutaFoto" />
+        <Entry Text="{Binding Item.RutaFoto}" IsEnabled="False"/>
+
+        <Button Text="Cargar" Command="{Binding }"/>
+
+        <Label Text="Alias" />
+        <Entry Text="{Binding Item.Alias}"/>
+
+        <Label Text="IdTipoGenOcupacion" />
+        <Entry Text="{Binding Item.IdTipoGenOcupacion}"/>
+
+        <Label Text="IdGenOcupacion" />
+        <Entry Text="{Binding Item.IdGenOcupacion}"/>
+
+        <Label Text="IdTipoGenEstadoCivil" />
+        <Entry Text="{Binding Item.IdTipoGenEstadoCivil}"/>
+
+        <Label Text="IdGenEstadoCivil" />
+        <Entry Text="{Binding Item.IdGenEstadoCivil}"/>
+
+        <Label Text="Fecha Registro" IsVisible="False"/>
+        <Entry Text="{Binding Item.FechaReg}" IsVisible="False"/>
+
+        <Label Text="Usuario Registro" IsVisible="False"/>
+        <Entry Text="{Binding Item.UsuarioReg}" IsVisible="False"/>
+
+        <Label Text="Fecha Ultima Modificación" IsVisible="False"/>
+        <Entry Text="{Binding Item.FechaUltMod}" IsVisible="False"/>
+
+        <Label Text="Usuario Ultima Modificación" IsVisible="False"/>
+        <Entry Text="{Binding Item.UsuarioMod}" IsVisible="False"/>
+
+        <Label Text="Activo" />
+        <Switch IsToggled="{Binding Item.Activo}"/>
+
+        <Label Text="Borrado" />
+        <Switch IsToggled="{Binding Item.Borrado}"/>
+
+
+        <Button Text="Guardar"  Command="{Binding FicMetSaveCommand}"/>
+        <Button Text="Cancelar" Command="{Binding FicMetCancelCommand}"/>
+    </StackLayout>
+</ContentPage>
