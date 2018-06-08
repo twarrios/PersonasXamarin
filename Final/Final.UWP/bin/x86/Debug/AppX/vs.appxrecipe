@@ -31,13 +31,13 @@
     <AppXManifest Include="C:\Users\twarrios\source\repos\Final\Final\Final.UWP\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-05-28T20:27:34.559</Modified>
+      <Modified>2018-06-07T17:28:24.351</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\twarrios\source\repos\Final\Final\Final.UWP\bin\x86\Debug\Final.UWP.exe">
       <PackagePath>entrypoint\Final.UWP.exe</PackagePath>
-      <Modified>2018-05-28T20:27:32.807</Modified>
+      <Modified>2018-06-07T17:28:18.342</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\twarrios\.nuget\packages\autofac\4.8.1\lib\netstandard1.1\Autofac.dll">
       <PackagePath>Autofac.dll</PackagePath>
@@ -741,7 +741,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\twarrios\source\repos\Final\Final\Final\bin\Debug\netstandard1.4\Final.dll">
       <PackagePath>Final.dll</PackagePath>
-      <Modified>2018-05-28T20:27:22.396</Modified>
+      <Modified>2018-06-07T17:28:03.522</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\twarrios\source\repos\Final\Final\Final.UWP\Assets\425393.jpg">
       <PackagePath>Assets\425393.jpg</PackagePath>
@@ -892,11 +892,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\twarrios\source\repos\Final\Final\Final.UWP\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2018-05-28T20:27:32.458</Modified>
+      <Modified>2018-06-07T17:28:17.959</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\twarrios\source\repos\Final\Final\Final.UWP\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2018-05-28T20:27:32.460</Modified>
+      <Modified>2018-06-07T17:28:17.961</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.16299.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -913,7 +913,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\twarrios\source\repos\Final\Final\Final.UWP\bin\x86\Debug\Core\Final.UWP.exe">
       <PackagePath>Final.UWP.exe</PackagePath>
-      <Modified>2018-05-28T20:27:34.548</Modified>
+      <Modified>2018-06-07T17:28:24.337</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
