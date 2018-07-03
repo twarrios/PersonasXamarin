@@ -1,14 +1,17 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard1.4</TargetFramework>
+    <TargetFramework>netstandard2.0</TargetFramework>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
     <FileVersion>1.0.0.0</FileVersion>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Autofac" Version="4.8.1" />
+    <PackageReference Include="MailKit" Version="2.0.4" />
     <PackageReference Include="sqlite-net-pcl" Version="1.4.118" />
+    <PackageReference Include="Syncfusion.Xamarin.SfDataGrid" Version="16.1.0.37" />
+    <PackageReference Include="Xam.Plugin.Media" Version="4.0.0.9" />
     <PackageReference Include="Xamarin.Forms" Version="3.0.0.482510" />
   </ItemGroup>
 
@@ -20,32 +23,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="Views\Personas\FicViCpRhCatPersonasPerfilesDetalle.xaml.cs">
-      <DependentUpon>FicViCpRhCatPersonasPerfilesDetalle.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="Views\Personas\FicViCpRhCatPersonasHomologadasDetalle.xaml.cs">
-      <DependentUpon>FicViCpRhCatPersonasHomologadasDetalle.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="Views\Personas\FicViCpRhCatPersonasDatosAdicionalesDetalle.xaml.cs">
-      <DependentUpon>FicViCpRhCatPersonasDatosAdicionalesDetalle.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="Views\Personas\FicViCpRhCatPersonasPerfilesItem.xaml.cs">
-      <DependentUpon>FicViCpRhCatPersonasPerfilesItem.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="Views\Personas\FicViCpRhCatPersonasHomologadasItem.xaml.cs">
-      <DependentUpon>FicViCpRhCatPersonasHomologadasItem.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="Views\Personas\FicViCpRhCatPersonasDatosAdicionalesItem.xaml.cs">
-      <DependentUpon>FicViCpRhCatPersonasDatosAdicionalesItem.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="Views\Personas\FicViCpRhCatPersonasPerfilesList.xaml.cs">
-      <DependentUpon>FicViCpRhCatPersonasPerfilesList.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="Views\Personas\FicViCpRhCatPersonasHomologadasList.xaml.cs">
-      <DependentUpon>FicViCpRhCatPersonasHomologadasList.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="Views\Personas\FicViCpRhCatPersonasDatosAdicionalesList.xaml.cs">
-      <DependentUpon>FicViCpRhCatPersonasDatosAdicionalesList.xaml</DependentUpon>
+    <Compile Update="Views\Personas\FicViCpRegister.xaml.cs">
+      <DependentUpon>FicViCpRegister.xaml</DependentUpon>
     </Compile>
     <Compile Update="Views\Personas\FicViCpRhCatDomiciliosItem.xaml.cs">
       <DependentUpon>FicViCpRhCatDomiciliosItem.xaml</DependentUpon>
@@ -65,5 +44,26 @@
     <Compile Update="Views\Personas\FicViCpRhCatDirWebList.xaml.cs">
       <DependentUpon>FicViCpRhCatDirWebList.xaml</DependentUpon>
     </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Views\Personas\FicViCpRegister.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Personas\FicViCpLogin.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Personas\FicViCpRhCatTelefonosDetalle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Personas\FicViCpRhCatTelefonosItem.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Personas\FicViCpRhCatTelefonosList.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Personas\MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>

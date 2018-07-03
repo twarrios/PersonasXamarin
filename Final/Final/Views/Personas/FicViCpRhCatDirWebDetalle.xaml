@@ -9,60 +9,33 @@
         Padding="20"
         x:Name="stack">
 
-        <Label Text="IdPersona" />
-        <Entry Text="{Binding Item.IdPersona}" IsEnabled="False"/>
+        <Label Text="IdDirWeb" />
+        <Entry Text="{Binding Item.IdDirWeb}" IsEnabled="False"/>
         
-        <Label Text="IdInstituto" />
-        <Entry Text="{Binding Item.IdInstituto}"/>
+        <Label Text="DesDirWeb" />
+        <Entry Text="{Binding Item.DesDirWeb}"/>
 
-        <Label Text="Numero de Control" />
-        <Entry Text="{Binding Item.NumControl}"/>
+        <Label Text="DirWeb" />
+        <Entry Text="{Binding Item.DirWeb}"/>
 
-        <Label Text="Nombre" />
-        <Entry Text="{Binding Item.Nombre}"/>
+        <Label Text="principal" />
+        <Switch IsToggled="{Binding Item.Principal}"/>
 
-        <Label Text="Apellido Paterno" />
-        <Entry Text="{Binding Item.ApPaterno}"/>
+        <Label Text="IdGenDirWeb" />
+        <Picker x:Name="GenDirWeb"/>
+        <Entry Text="{Binding Item.IdGenDirWeb}" x:Name="uno" IsVisible="False"/>
 
-        <Label Text="Apellido Materno" />
-        <Entry Text="{Binding Item.ApMaterno}"/>
+            <!--
+        <Label Text="Clave Referencia" />
+        
+        <Picker
+            SelectedItem="{Binding SelectedPersona}"
+            ItemsSource="{Binding FicMetItemsPersona}"
+            ItemDisplayBinding="{Binding NumControl}"/>
+        <Entry Text="{Binding SelectedPersona.IdPersona}" IsEnabled="False"/>-->
 
-        <Label Text="RFC" />
-        <Entry Text="{Binding Item.RFC}"/>
-
-        <Label Text="CURP" />
-        <Entry Text="{Binding Item.CURP}"/>
-
-        <Label Text="FechaNac" />
-        <Entry Text="{Binding Item.FechaNac}"/>
-
-        <Label Text="TipoPersona" />
-        <Switch IsToggled="{Binding Item.TipoPerona}"/>
-
-        <Label Text="Sexo" />
-        <Switch IsToggled="{Binding Item.Sexo}"/>
-
-        <Label Text="RutaFoto" />
-        <Entry Text="{Binding Item.RutaFoto}"/>
-
-        <Label>hola</Label>
-        <Image x:Name="img"/>
-
-        <Label Text="Alias" />
-        <Entry Text="{Binding Item.Alias}"/>
-
-        <Label Text="IdTipoGenOcupacion" />
-        <Entry Text="{Binding Item.IdTipoGenOcupacion}"/>
-
-        <Label Text="IdGenOcupacion" />
-        <Entry Text="{Binding Item.IdGenOcupacion}"/>
-
-        <Label Text="IdTipoGenEstadoCivil" />
-        <Entry Text="{Binding Item.IdTipoGenEstadoCivil}"/>
-
-        <Label Text="IdGenEstadoCivil" />
-        <Entry Text="{Binding Item.IdGenEstadoCivil}"/>
-
+        <Label Text="Referencia" />
+        <Entry Text="{Binding Item.Referencia}"/>
 
         <Label Text="Activo" />
         <Switch IsToggled="{Binding Item.Activo}" />

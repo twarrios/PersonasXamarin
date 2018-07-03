@@ -7,6 +7,7 @@ using Final.Models.Personas;
 using Final.Interfaces.Navigation;
 using Final.Interfaces.Personas;
 using System.Collections.ObjectModel;
+using Final.Views;
 
 namespace Final.ViewModels.Personas
 {
@@ -15,17 +16,18 @@ namespace Final.ViewModels.Personas
         private ObservableCollection<rh_cat_dir_web> FicOcZt_rh_cat_dir_web_Items;
         private rh_cat_dir_web FicZt_rh_cat_dir_web_SelectedItem;
         private string _busqueda;
+        private int _ClaveReferencia;
 
         private ICommand ficAddCommand;
         private ICommand ficSearch;
 
         private IFicSrvNavigationCatPersonas FicLoSrvNavigationCatPersonas;
-        private IFicSrvRhCatDirWeb FicLoSrvCatPersonas;
+        private IFicSrvCatPersonas FicLoSrvCatPersonas;
 
         //FIC: Constructor
         public FicVmRhCatDirWebList(
             IFicSrvNavigationCatPersonas ficPaSrvNavigationCatPersonas,
-            IFicSrvRhCatDirWeb ficPaSrvCatPersonas)
+            IFicSrvCatPersonas ficPaSrvCatPersonas)
         {
             //FIC: se asigna el objeto que se recibe como parametro de tipo navigation services
             FicLoSrvNavigationCatPersonas = ficPaSrvNavigationCatPersonas;
@@ -76,7 +78,7 @@ namespace Final.ViewModels.Personas
             base.OnAppearing(navigationContext);
 
             //FIC: Ejecuto uno de los metodos definidos en los servicios de Interfaz de inventarios
-            var result = await FicLoSrvCatPersonas.FicMetGetListRhCatDirWeb();
+           var result = await FicLoSrvCatPersonas.FicMetGetListRhCatDirWeb(Global.ClaveReferencia);
 
             FicMetZt_rh_cat_dir_web_Items = new ObservableCollection<rh_cat_dir_web>();
             foreach (var ficPaItem in result)
@@ -98,7 +100,7 @@ namespace Final.ViewModels.Personas
 
             if (busqueda.Equals(""))
             {
-                var result1 = await FicLoSrvCatPersonas.FicMetGetListRhCatDirWeb();
+                var result1 = await FicLoSrvCatPersonas.FicMetGetListRhCatDirWeb(Global.ClaveReferencia);
                 FicMetZt_rh_cat_dir_web_Items = new ObservableCollection<rh_cat_dir_web>();
                 foreach (var ficPaItem in result1)
                 {

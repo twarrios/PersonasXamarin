@@ -31,6 +31,18 @@
     <AppxPackagedFile Include="C:\Users\twarrios\.nuget\packages\autofac\4.8.1\lib\netstandard1.1\Autofac.dll">
       <PackagePath>Autofac.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\twarrios\.nuget\packages\mailkit\2.0.4\lib\netstandard2.0\MailKit.dll">
+      <PackagePath>MailKit.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\twarrios\.nuget\packages\mimekit\2.0.4\lib\netstandard2.0\MimeKit.dll">
+      <PackagePath>MimeKit.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\twarrios\.nuget\packages\plugin.permissions\3.0.0.12\lib\uap10.0.10240\Plugin.Permissions.dll">
+      <PackagePath>Plugin.Permissions.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\twarrios\.nuget\packages\portable.bouncycastle\1.8.2\lib\netstandard2.0\BouncyCastle.Crypto.dll">
+      <PackagePath>BouncyCastle.Crypto.dll</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\twarrios\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.1\runtimes\win10-x86\nativeassets\uap10.0.15138\clrcompression.dll">
       <PackagePath>clrcompression.dll</PackagePath>
     </AppxPackagedFile>
@@ -541,6 +553,36 @@
     <AppxPackagedFile Include="C:\Users\twarrios\.nuget\packages\sqlitepclraw.provider.e_sqlite3.uwp10\1.1.5\lib\uap10.0\SQLitePCLRaw.provider.e_sqlite3.dll">
       <PackagePath>SQLitePCLRaw.provider.e_sqlite3.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\twarrios\.nuget\packages\syncfusion.xamarin.core\16.1.0.37\lib\uap10.0\Syncfusion.Core.XForms.dll">
+      <PackagePath>Syncfusion.Core.XForms.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\twarrios\.nuget\packages\syncfusion.xamarin.gridcommon\16.1.0.37\lib\uap10.0\Syncfusion.GridCommon.Portable.dll">
+      <PackagePath>Syncfusion.GridCommon.Portable.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\twarrios\.nuget\packages\syncfusion.xamarin.sfdatagrid\16.1.0.37\lib\uap10.0\Syncfusion.Data.Portable.dll">
+      <PackagePath>Syncfusion.Data.Portable.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\twarrios\.nuget\packages\syncfusion.xamarin.sfdatagrid\16.1.0.37\lib\uap10.0\Syncfusion.SfDataGrid.XForms.UWP.dll">
+      <PackagePath>Syncfusion.SfDataGrid.XForms.UWP.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\twarrios\.nuget\packages\syncfusion.xamarin.sfdatagrid\16.1.0.37\lib\uap10.0\Syncfusion.SfDataGrid.XForms.dll">
+      <PackagePath>Syncfusion.SfDataGrid.XForms.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\twarrios\.nuget\packages\syncfusion.xamarin.sfnumerictextbox\16.1.0.37\lib\uap10.0\Syncfusion.SfInput.UWP.dll">
+      <PackagePath>Syncfusion.SfInput.UWP.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\twarrios\.nuget\packages\syncfusion.xamarin.sfnumerictextbox\16.1.0.37\lib\uap10.0\Syncfusion.SfNumericTextBox.XForms.UWP.dll">
+      <PackagePath>Syncfusion.SfNumericTextBox.XForms.UWP.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\twarrios\.nuget\packages\syncfusion.xamarin.sfnumerictextbox\16.1.0.37\lib\uap10.0\Syncfusion.SfNumericTextBox.XForms.dll">
+      <PackagePath>Syncfusion.SfNumericTextBox.XForms.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\twarrios\.nuget\packages\syncfusion.xamarin.sfnumerictextbox\16.1.0.37\lib\uap10.0\Syncfusion.SfShared.UWP.dll">
+      <PackagePath>Syncfusion.SfShared.UWP.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\twarrios\.nuget\packages\xam.plugin.media\4.0.0.9\lib\uap10.0.10240\Plugin.Media.dll">
+      <PackagePath>Plugin.Media.dll</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\twarrios\.nuget\packages\xamarin.forms\3.0.0.482510\lib\uap10.0\Xamarin.Forms.Core.dll">
       <PackagePath>Xamarin.Forms.Core.dll</PackagePath>
     </AppxPackagedFile>
@@ -553,7 +595,7 @@
     <AppxPackagedFile Include="C:\Users\twarrios\.nuget\packages\xamarin.forms\3.0.0.482510\lib\uap10.0\Xamarin.Forms.Xaml.dll">
       <PackagePath>Xamarin.Forms.Xaml.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\twarrios\source\repos\Final\Final\Final\bin\Debug\netstandard1.4\Final.dll">
+    <AppxPackagedFile Include="C:\Users\twarrios\source\repos\Final\Final\Final\bin\Debug\netstandard2.0\Final.dll">
       <PackagePath>Final.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\twarrios\source\repos\Final\Final\Final.UWP\Assets\425393.jpg">
@@ -667,6 +709,15 @@
       <PackagePath>Assets\Wide310x150Logo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\twarrios\source\repos\Final\Final\Final.UWP\facebook.png">
+      <PackagePath>facebook.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\twarrios\source\repos\Final\Final\Final.UWP\gmail.png">
+      <PackagePath>gmail.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\twarrios\source\repos\Final\Final\Final.UWP\login.png">
+      <PackagePath>login.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\twarrios\source\repos\Final\Final\Final.UWP\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
     </AppxPackagedFile>
@@ -681,6 +732,18 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.16299.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\twarrios\.nuget\packages\syncfusion.xamarin.sfnumerictextbox\16.1.0.37\lib\uap10.0\Syncfusion.SfInput.UWP\Syncfusion.SfInput.UWP.xr.xml">
+      <PackagePath>Syncfusion.SfInput.UWP\Syncfusion.SfInput.UWP.xr.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\twarrios\.nuget\packages\syncfusion.xamarin.sfnumerictextbox\16.1.0.37\lib\uap10.0\Syncfusion.SfInput.UWP\Properties\Syncfusion.SfInput.UWP.rd.xml">
+      <PackagePath>Syncfusion.SfInput.UWP\Properties\Syncfusion.SfInput.UWP.rd.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\twarrios\.nuget\packages\syncfusion.xamarin.sfnumerictextbox\16.1.0.37\lib\uap10.0\Syncfusion.SfShared.UWP\Syncfusion.SfShared.UWP.xr.xml">
+      <PackagePath>Syncfusion.SfShared.UWP\Syncfusion.SfShared.UWP.xr.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\twarrios\.nuget\packages\syncfusion.xamarin.sfnumerictextbox\16.1.0.37\lib\uap10.0\Syncfusion.SfShared.UWP\Properties\Syncfusion.SfShared.UWP.rd.xml">
+      <PackagePath>Syncfusion.SfShared.UWP\Properties\Syncfusion.SfShared.UWP.rd.xml</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\twarrios\.nuget\packages\xamarin.forms\3.0.0.482510\lib\uap10.0\Xamarin.Forms.Platform.UAP\Xamarin.Forms.Platform.UAP.xr.xml">
       <PackagePath>Xamarin.Forms.Platform.UAP\Xamarin.Forms.Platform.UAP.xr.xml</PackagePath>

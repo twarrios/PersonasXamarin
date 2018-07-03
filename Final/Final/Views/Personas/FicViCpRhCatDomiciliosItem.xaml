@@ -7,77 +7,66 @@
         Padding="20"
         x:Name="stack">
 
-        <Label Text="IdPerona" IsVisible="False"/>
-        <Entry Text="{Binding Item.IdPersona}" IsVisible="False"/>
+        <Label Text="Domicilio" />
+        <Entry Text="{Binding Item.Domicilio}"/>
 
-        <Label Text="IdInstituto" />
-        <Entry Text="{Binding Item.IdInstituto}"/>
+        <Label Text="Entre Calle 1" />
+        <Entry Text="{Binding Item.EntreCalle1}"/>
 
-        <Label Text="Numero de Control" />
-        <Entry Text="{Binding Item.NumControl}"/>
+        <Label Text="Entre Calle 2" />
+        <Entry Text="{Binding Item.EntreCalle2}"/>
 
-        <Label Text="Nombre" />
-        <Entry Text="{Binding Item.Nombre}"/>
+        <Label Text="Codigo Postal" />
+        <Entry Text="{Binding Item.CodigoPostal}"/>
 
-        <Label Text="Apellido Paterno" />
-        <Entry Text="{Binding Item.ApPaterno}"/>
+        <Label Text="Coordenadas"/>
+        <Entry Text="{Binding Item.Coordenadas}"/>
 
-        <Label Text="Apellido Materno" />
-        <Entry Text="{Binding Item.ApMaterno}"/>
+        <Label Text="Principal" />
+        <Switch IsToggled="{Binding Item.Principal}"/>
 
-        <Label Text="RFC" />
-        <Entry Text="{Binding Item.RFC}"/>
+        <Label Text="Pais" />
+        <Picker x:Name="Pais"/>
+        <Entry Text="{Binding Item.Pais}" x:Name="Epais" IsVisible="False"/>
 
-        <Label Text="CURP" />
-        <Entry Text="{Binding Item.CURP}"/>
+        <Label Text="Estado" />
+        <Picker x:Name="Estado"/>
+        <Entry Text="{Binding Item.Estado}" x:Name="Eestado" IsVisible="False"/>
 
-        <Label Text="FechaNac" />
-        <Entry Text="{Binding Item.FechaNac}"/>
+        <Label Text="Municipio" />
+        <Picker x:Name="Municipio"/>
+        <Entry Text="{Binding Item.Municipio}" x:Name="Emunicipo" IsVisible="False"/>
 
-        <Label Text="TipoPersona" />
-        <Switch IsToggled="{Binding Item.TipoPerona}"/>
+        <Label Text="Localidad" />
+        <Entry Text="{Binding Item.Localidad}"/>
 
-        <Label Text="Sexo" />
-        <Switch IsToggled="{Binding Item.Sexo}"/>
+        <Label Text="Colonia" />
+        <Entry Text="{Binding Item.Colonia}"/>
 
-        <Label Text="RutaFoto" />
-        <Entry Text="{Binding Item.RutaFoto}" IsEnabled="False"/>
+        <Label Text="Referencia" />
+        <Entry Text="{Binding Item.Referencia}"/>
 
-        <Button Text="Cargar" Command="{Binding }"/>
-
-        <Label Text="Alias" />
-        <Entry Text="{Binding Item.Alias}"/>
-
-        <Label Text="IdTipoGenOcupacion" />
-        <Entry Text="{Binding Item.IdTipoGenOcupacion}"/>
-
-        <Label Text="IdGenOcupacion" />
-        <Entry Text="{Binding Item.IdGenOcupacion}"/>
-
-        <Label Text="IdTipoGenEstadoCivil" />
-        <Entry Text="{Binding Item.IdTipoGenEstadoCivil}"/>
-
-        <Label Text="IdGenEstadoCivil" />
-        <Entry Text="{Binding Item.IdGenEstadoCivil}"/>
-
-        <Label Text="Fecha Registro" IsVisible="False"/>
-        <Entry Text="{Binding Item.FechaReg}" IsVisible="False"/>
-
-        <Label Text="Usuario Registro" IsVisible="False"/>
-        <Entry Text="{Binding Item.UsuarioReg}" IsVisible="False"/>
-
-        <Label Text="Fecha Ultima Modificación" IsVisible="False"/>
-        <Entry Text="{Binding Item.FechaUltMod}" IsVisible="False"/>
-
-        <Label Text="Usuario Ultima Modificación" IsVisible="False"/>
-        <Entry Text="{Binding Item.UsuarioMod}" IsVisible="False"/>
+        <!--
+        <Label Text="Clave Referencia" />
+        <Picker
+            SelectedItem="{Binding SelectedPersona}"
+            ItemsSource="{Binding FicMetItemsPersona}"
+            ItemDisplayBinding="{Binding NumControl}"/>
+        <Entry Text="{Binding SelectedPersona.IdPersona}"/>
+    -->    
+        <Label Text="Tipo Domicilio" />
+        <Picker x:Name="TipoD"/>
+        <Entry Text="{Binding Item.TipoDomicilio}" x:Name="etd" IsVisible="False"/>
 
         <Label Text="Activo" />
-        <Switch IsToggled="{Binding Item.Activo}"/>
+        <Switch IsToggled="{Binding Item.Activo}" />
 
         <Label Text="Borrado" />
         <Switch IsToggled="{Binding Item.Borrado}"/>
 
+        <Label Text="IdGenDom" />
+        <Picker x:Name="GenDom"/>
+        <Entry Text="{Binding Item.IdGenDom}" x:Name="uno" IsVisible="False"/>
 
         <Button Text="Guardar"  Command="{Binding FicMetSaveCommand}"/>
         <Button Text="Cancelar" Command="{Binding FicMetCancelCommand}"/>

@@ -20,7 +20,7 @@ namespace Final.Views.Personas
 			InitializeComponent ();
             FicLoParameter = ficPaParameter;
 
-            BindingContext = App.FicMetLocator.FicVmCatPersonasList;
+            BindingContext = App.FicMetLocator.FicVmRhCatDomiciliosList;
           
             
         }
@@ -28,7 +28,7 @@ namespace Final.Views.Personas
         {
             //FIC: Aqui se declara una variable de tipo ViewModel Item
 
-            var FicViewModel = BindingContext as FicVmCatPersonasList;
+            var FicViewModel = BindingContext as FicVmRhCatDomiciliosList;
             if (FicViewModel != null) FicViewModel.OnAppearing(FicLoParameter);
 
 
@@ -36,7 +36,7 @@ namespace Final.Views.Personas
 
         protected override void OnDisappearing()
         {
-            var FicViewModel = BindingContext as FicVmCatPersonasList;
+            var FicViewModel = BindingContext as FicVmRhCatDomiciliosList;
             if (FicViewModel != null) FicViewModel.OnDisappearing();
         }
     }

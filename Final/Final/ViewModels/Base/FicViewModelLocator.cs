@@ -23,36 +23,31 @@ namespace Final.ViewModels.Base
             builder.RegisterType<FicVmCatPersonasList>();
             builder.RegisterType<FicVmCatPersonasDetalle>();
 
-     
 
+            //Catalogo de Domicilios
+            builder.RegisterType<FicVmRhCatDomiciliosDetalle>();
+            builder.RegisterType<FicVmRhCatDomiciliosList>();
+            builder.RegisterType<FicVmRhCatDomiciliosItem>();
 
+            //Catalogo de Telefonos
+            builder.RegisterType<FicVmRhCatTelefonosDetalle>();
+            builder.RegisterType<FicVmRhCatTelefonosList>();
+            builder.RegisterType<FicVmRhCatTelefonosItem>();
 
+            //Catalogo de DirWeb
+            builder.RegisterType<FicVmRhCatDirWebDetalle>();
+            builder.RegisterType<FicVmRhCatDirWebList>();
+            builder.RegisterType<FicVmRhCatDirWebItem>();
+
+            //etc
+            builder.RegisterType<FicVmLogin>();
+            builder.RegisterType<FicVmRegister>();
+            builder.RegisterType<FicVmMainPage>();
             // Services ++++++++++++++++++++++++++++++++++++++++++++
 
             //Catalogo de PERSONAS
             builder.RegisterType<FicSrvNavigationCatPersonas>().As<IFicSrvNavigationCatPersonas>().SingleInstance();
             builder.RegisterType<FicSrvCatPersonasList>().As<IFicSrvCatPersonas>();
-
-            builder.RegisterType<FicSrvNavigationRhCatDirWeb>().As<IFicSrvNavigationCatPersonas>().SingleInstance();
-            builder.RegisterType<FicSrvRhCatDirWebList>().As<IFicSrvRhCatDirWeb>();
-
-            builder.RegisterType<FicSrvNavigationRhCatDomicilios>().As<IFicSrvNavigationCatPersonas>().SingleInstance();
-            builder.RegisterType<FicSrvRhCatDomiciliosList>().As<IFicSrvRhCatDomicilios>();
-
-            builder.RegisterType<FicSrvNavigationRhCatPersonasDatosAdicionales>().As<IFicSrvNavigationCatPersonas>().SingleInstance();
-            builder.RegisterType<FicSrvRhCatPersonasDatosAdicionalesList>().As<IFicSrvRhCatPersonasDatosAdicionales>();
-
-            builder.RegisterType<FicSrvNavigationRhCatPersonasHomologadas>().As<IFicSrvNavigationCatPersonas>().SingleInstance();
-            builder.RegisterType<FicSrvRhCatPersonasHomologadasList>().As<IFicSrvRhCatPersonasHomologadas>();
-
-            builder.RegisterType<FicSrvNavigationRhCatPersonasPerfiles>().As<IFicSrvNavigationCatPersonas>().SingleInstance();
-            builder.RegisterType<FicSrvRhCatPersonasPerfilesList>().As<IFicSrvRhCatPersonasPerfiles>();
-
-            builder.RegisterType<FicSrvNavigationRhCatTelefonos>().As<IFicSrvNavigationCatPersonas>().SingleInstance();
-            builder.RegisterType<FicSrvRhCatTelefonosList>().As<IFicSrvRhCatTelefonos>();
-
-            builder.RegisterType<FicSrvNavigationRhPersonasPerfilEstatus>().As<IFicSrvNavigationCatPersonas>().SingleInstance();
-            builder.RegisterType<FicSrvRhPersonasPerfilEstatusList>().As<IFicSrvRhPersonasPerfilEstatus>();
 
             if (FicContainer != null)
             {
@@ -80,7 +75,69 @@ namespace Final.ViewModels.Base
             get { return FicContainer.Resolve<FicVmCatPersonasDetalle>(); }
         }
 
+        //--------------------- CATALOGO DE DOMICILIOS --------------------
+        public FicVmRhCatDomiciliosItem FicVmRhCatDomiciliosItem
+        {
+            get { return FicContainer.Resolve<FicVmRhCatDomiciliosItem>(); }
+        }
 
+        public FicVmRhCatDomiciliosList FicVmRhCatDomiciliosList
+        {
+            get { return FicContainer.Resolve<FicVmRhCatDomiciliosList>(); }
+        }
+
+        public FicVmRhCatDomiciliosDetalle FicVmRhCatDomiciliosDetalle
+        {
+            get { return FicContainer.Resolve<FicVmRhCatDomiciliosDetalle>(); }
+        }
+
+        //Telefonos
+        public FicVmRhCatTelefonosItem FicVmRhCatTelefonosItem
+        {
+            get { return FicContainer.Resolve<FicVmRhCatTelefonosItem>(); }
+        }
+
+        public FicVmRhCatTelefonosList FicVmRhCatTelefonosList
+        {
+            get { return FicContainer.Resolve<FicVmRhCatTelefonosList>(); }
+        }
+
+        public FicVmRhCatTelefonosDetalle FicVmRhCatTelefonosDetalle
+        {
+            get { return FicContainer.Resolve<FicVmRhCatTelefonosDetalle>(); }
+        }
+
+        //Dirweb
+        public FicVmRhCatDirWebItem FicVmRhCatDirWebItem
+        {
+            get { return FicContainer.Resolve<FicVmRhCatDirWebItem>(); }
+        }
+
+        public FicVmRhCatDirWebList FicVmRhCatDirWebList
+        {
+            get { return FicContainer.Resolve<FicVmRhCatDirWebList>(); }
+        }
+
+        public FicVmRhCatDirWebDetalle FicVmRhCatDirWebDetalle
+        {
+            get { return FicContainer.Resolve<FicVmRhCatDirWebDetalle>(); }
+        }
+
+        //Otros
+        public FicVmLogin FicVmLogin
+        {
+            get { return FicContainer.Resolve<FicVmLogin>(); }
+        }
+
+        public FicVmRegister FicVmRegister
+        {
+            get { return FicContainer.Resolve<FicVmRegister>(); }
+        }
+
+        public FicVmMainPage FicVmMainPage
+        {
+            get { return FicContainer.Resolve<FicVmMainPage>(); }
+        }
     }
 }
 

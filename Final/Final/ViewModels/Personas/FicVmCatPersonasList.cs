@@ -15,6 +15,9 @@ namespace Final.ViewModels.Personas
 
         private ICommand ficAddCommand;
         private ICommand ficSearch;
+        private ICommand ficDirWeb;
+        private ICommand ficTelefonos;
+        private ICommand ficDomicilios;
 
         private IFicSrvNavigationCatPersonas FicLoSrvNavigationCatPersonas;
         private IFicSrvCatPersonas FicLoSrvCatPersonas;
@@ -68,13 +71,28 @@ namespace Final.ViewModels.Personas
             get { return ficSearch = ficSearch ?? new FicVmDelegateCommand(Find); }
         }
 
+        public ICommand ficMetDirWeb
+        {
+            get { return ficDirWeb = ficDirWeb ?? new FicVmDelegateCommand(DirWeb); }
+        }
+
+        public ICommand ficMetTelefonos
+        {
+            get { return ficTelefonos = ficTelefonos ?? new FicVmDelegateCommand(Telefonos); }
+        }
+
+        public ICommand ficMetDomicilios
+        {
+            get { return ficDomicilios = ficDomicilios ?? new FicVmDelegateCommand(Domicilios); }
+        }
+
         public override async void OnAppearing(object navigationContext)
         {
             base.OnAppearing(navigationContext);
 
             //FIC: Ejecuto uno de los metodos definidos en los servicios de Interfaz de inventarios
             var result = await FicLoSrvCatPersonas.FicMetGetListCatPersonas();
-
+        
             FicMetZt_cat_personas_Items = new ObservableCollection<cat_personas>();
             foreach (var ficPaItem in result)
             {
@@ -86,6 +104,24 @@ namespace Final.ViewModels.Personas
         {
             var ficZt_cat_productos = new cat_personas();
             FicLoSrvNavigationCatPersonas.FicMetNavigateTo<FicVmCatPersonasItem>(ficZt_cat_productos);
+        }
+
+        private void DirWeb()
+        {
+            var ficZt_Dirweb = new rh_cat_dir_web();
+            FicLoSrvNavigationCatPersonas.FicMetNavigateTo<FicVmRhCatDirWebList>(ficZt_Dirweb);
+        }
+
+        private void Domicilios()
+        {
+            var ficZt_Domicilios = new rh_cat_domicilios();
+            FicLoSrvNavigationCatPersonas.FicMetNavigateTo<FicVmRhCatDomiciliosList>(ficZt_Domicilios);
+        }
+
+        private void Telefonos()
+        {
+            var ficZt_Telefonos = new rh_cat_telefonos();
+            FicLoSrvNavigationCatPersonas.FicMetNavigateTo<FicVmRhCatTelefonosList>(ficZt_Telefonos);
         }
 
         private async void Find()

@@ -15,7 +15,19 @@ namespace Final.Services.Navigation
 
             { typeof(FicVmCatPersonasDetalle), typeof(FicViCpCatPersonasDetalle)},
             { typeof(FicVmCatPersonasItem), typeof(FicViCpCatPersonasItem)},
-            { typeof(FicVmCatPersonasList), typeof(FicViCpCatPersonasList)}
+            { typeof(FicVmCatPersonasList), typeof(FicViCpCatPersonasList)},
+            { typeof(FicVmRhCatDirWebDetalle), typeof(FicViCpRhCatDirWebDetalle)},
+            { typeof(FicVmRhCatDirWebItem), typeof(FicViCpRhCatDirWebItem)},
+            { typeof(FicVmRhCatDirWebList), typeof(FicViCpRhCatDirWebList)},
+            { typeof(FicVmRhCatDomiciliosDetalle), typeof(FicViCpRhCatDomiciliosDetalle)},
+            { typeof(FicVmRhCatDomiciliosItem), typeof(FicViCpRhCatDomiciliosItem)},
+            { typeof(FicVmRhCatDomiciliosList), typeof(FicViCpRhCatDomiciliosList)},
+            { typeof(FicVmRhCatTelefonosDetalle), typeof(FicViCpRhCatTelefonosDetalle)},
+            { typeof(FicVmRhCatTelefonosItem), typeof(FicViCpRhCatTelefonosItem)},
+            { typeof(FicVmRhCatTelefonosList), typeof(FicViCpRhCatTelefonosList)},
+            { typeof(FicVmLogin), typeof(FicViCpLogin)},
+            { typeof(FicVmRegister), typeof(FicViCpRegister)},
+            { typeof(FicVmMainPage), typeof(MainPage)}
 
         };
 

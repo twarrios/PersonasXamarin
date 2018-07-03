@@ -6,23 +6,27 @@ using System.Windows.Input;
 using Final.Models.Personas;
 using Final.Interfaces.Navigation;
 using Final.Interfaces.Personas;
+using System.Collections.ObjectModel;
+using Final.Views;
 
 namespace Final.ViewModels.Personas
 {
    public class FicVmRhCatDirWebDetalle :FicViewModelBase
     {
         private rh_cat_dir_web Fic_rh_cat_dir_web_Item;
+        private ObservableCollection<cat_personas> Fic_Items_Persona;
+        public cat_personas Fic_Item_Persona;
 
         private ICommand FicSaveCommand;
         private ICommand FicDeleteCommand;
         private ICommand FicCancelCommand;
 
         private IFicSrvNavigationCatPersonas FicLoSrvNavigationCatPersonas;
-        private IFicSrvRhCatDirWeb FicLoSrvCatPersonas;
+        private IFicSrvCatPersonas FicLoSrvCatPersonas;
 
         public FicVmRhCatDirWebDetalle(
            IFicSrvNavigationCatPersonas FicPaSrvNavigationCatPersonas,
-           IFicSrvRhCatDirWeb FicPaSrvCatPersonas)
+           IFicSrvCatPersonas FicPaSrvCatPersonas)
         {
             //FIC: se asigna el objeto que se recibe como parametro de tipo navigation services
             FicLoSrvNavigationCatPersonas = FicPaSrvNavigationCatPersonas;
@@ -36,6 +40,26 @@ namespace Final.ViewModels.Personas
             set
             {
                 Fic_rh_cat_dir_web_Item = value;
+                RaisePropertyChanged();
+            }
+        }
+
+        public ObservableCollection<cat_personas> FicMetItemsPersona
+        {
+            get { return Fic_Items_Persona; }
+            set
+            {
+                Fic_Items_Persona = value;
+                RaisePropertyChanged();
+            }
+        }
+
+        public cat_personas SelectedPersona
+        {
+            get { return Fic_Item_Persona; }
+            set
+            {
+                Fic_Item_Persona = value;
                 RaisePropertyChanged();
             }
         }
@@ -55,7 +79,7 @@ namespace Final.ViewModels.Personas
             get { return FicCancelCommand = FicCancelCommand ?? new FicVmDelegateCommand(CancelCommandExecute); }
         }
 
-        public override void OnAppearing(object FicPaNavigationContext)
+        public async override void OnAppearing(object FicPaNavigationContext)
         {
             var FicLoZt_inventarios = FicPaNavigationContext as rh_cat_dir_web;
 
@@ -63,12 +87,29 @@ namespace Final.ViewModels.Personas
             {
                 Item = FicLoZt_inventarios;
             }
+            /*
+            var result = await FicLoSrvCatPersonas.FicMetGetListCatPersonas();
+
+            FicMetItemsPersona = new ObservableCollection<cat_personas>();
+            foreach (var ficPaItem in result)
+            {
+                FicMetItemsPersona.Add(ficPaItem);
+            }
+
+            var resultCedi = await FicLoSrvCatPersonas.FitMetGetPersona(FicLoZt_inventarios);
+            SelectedPersona = new cat_personas();
+            if (resultCedi != null)
+            {
+                SelectedPersona = resultCedi;
+            }*/
 
             base.OnAppearing(FicPaNavigationContext);
         }
 
         private async void SaveCommandExecute()
         {
+            Item.ClaveReferencia = Global.ClaveReferencia;
+            Item.UsuarioReg = Global.UsuarioReg;
             await FicLoSrvCatPersonas.FicMetInsertNewRhCatDirWeb(Item);
             FicLoSrvNavigationCatPersonas.FicMetNavigateBack();
         }

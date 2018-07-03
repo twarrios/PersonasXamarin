@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Final.iOS", "Final\Final.iO
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Final.UWP", "Final\Final.UWP\Final.UWP.csproj", "{8BC5B13E-6E06-41F3-B818-E7833FEEF60C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Final", "Final\Final\Final.csproj", "{3AE02394-7A36-4189-A759-0BC81D8A7E61}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Final", "Final\Final\Final.csproj", "{3AE02394-7A36-4189-A759-0BC81D8A7E61}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -22,7 +22,11 @@ namespace Final
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new FicViCpCatPersonasList(null));
+
+            MainPage = new NavigationPage(new FicViCpLogin(null));
+            //MainPage = new NavigationPage(new FicViCpRhCatDirWebList(null));
+            //MainPage = new NavigationPage(new FicViCpRhCatDomiciliosList(null));
+            //MainPage = new NavigationPage(new FicViCpRhCatTelefonosList(null));
 
 
         }

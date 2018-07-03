@@ -5,6 +5,15 @@ using SQLite;
 
 namespace Final.Models.Personas
 {
+    public class cat_institutos
+    {
+        [PrimaryKey,Unique]
+        public int IdInstituto { get; set; }
+        public string DesInstituto { get; set; }
+        public string Alias { get; set; }
+        public string Matriz { get; set; }
+    }
+
     public class cat_personas
     {
         [PrimaryKey, AutoIncrement]
@@ -16,8 +25,8 @@ namespace Final.Models.Personas
         public string RFC { get; set; }
         public string CURP { get; set; }
         public string FechaNac { get; set; }
-        public bool TipoPersona { get; set; }
-        public bool Sexo { get; set; }
+        public string TipoPersona { get; set; }
+        public string Sexo { get; set; }
         public string RutaFoto { get; set; }
         public string Alias { get; set; }
         public string FechaReg { get; set; }
@@ -26,16 +35,10 @@ namespace Final.Models.Personas
         public string UsuarioMod { get; set; }
         public bool Activo { get; set; }
         public bool Borrado { get; set; }
-        //FK
-        [Indexed]
         public int IdInstituto { get; set; }
-        [Indexed]
         public int IdTipoGenOcupacion { get; set; }
-        [Indexed]
         public int IdGenOcupacion { get; set; }
-        [Indexed]
         public int IdTipoGenEstadoCivil { get; set; }
-        [Indexed]
         public int IdGenEstadoCivil { get; set; }
 
         public override string ToString()
@@ -54,14 +57,14 @@ namespace Final.Models.Personas
 
     public class rh_cat_dir_web
     {
-        [PrimaryKey, Unique]
+        [PrimaryKey, AutoIncrement]
         public int IdDirWeb { get; set; }
         public string DesDirWeb { get; set; }
         public string DirWeb { get; set; }
         public bool Principal { get; set; }
         public int IdTipoGenDirWeb { get; set; }
         public int IdGenDirWeb { get; set; }
-        public string ClaveReferencia { get; set; }
+        public int ClaveReferencia { get; set; }
         public string Referencia { get; set; }
         public string FechaReg { get; set; }
         public string FechaUltMod { get; set; }
@@ -69,23 +72,11 @@ namespace Final.Models.Personas
         public string UsuarioMod { get; set; }
         public bool Activo { get; set; }
         public bool Borrado { get; set; }
-
-        /*
-        public override string ToString()
-        {
-            return string.Format("[rh_cat_dir_web: IdDirWeb={0}], DesDirWeb={1},  DirWeb={2}, Principal={3}, IdTipoGenDirWeb={4}, IdGenDirWeb={5}, " +
-                " ClaveReferencia={6}, Referencia={7}, FechaReg={8}," +
-              " UsuarioReg={9}, FechaUltMod={10}, UsuarioMod={11}, Activo={12}, Borrado={13}",
-                                 IdDirWeb,  IdGenOcupacion, IdTipoGenEstadoCivil, IdGenEstadoCivil,
-                                NumControl, Nombre, ApPaterno, ApMaterno, RFC, CURP, FechaNac, TipoPersona, Sexo,
-                                RutaFoto, Alias, FechaReg, UsuarioReg, FechaUltMod, UsuarioMod, Activo, Borrado
-                                 , IdPersona);
-        }*/
     }
 
     public class rh_cat_domicilios
     {
-        [PrimaryKey, Unique]
+        [PrimaryKey, AutoIncrement]
         public int IdDomicilio { get; set; }
         public string Domicilio { get; set; }
         public string EntreCalle1 { get; set; }
@@ -99,30 +90,27 @@ namespace Final.Models.Personas
         public string Localidad { get; set; }
         public string Colonia { get; set; }
         public string Referencia { get; set; }
-        public string ClaveReferencia { get; set; }
-        public bool TipoDomicilio { get; set; }
+        public int ClaveReferencia { get; set; }
+        public string TipoDomicilio { get; set; }
         public string FechaReg { get; set; }
         public string FechaUltMod { get; set; }
         public string UsuarioReg { get; set; }
         public string UsuarioMod { get; set; }
         public bool Activo { get; set; }
         public bool Borrado { get; set; }
-        //FK
-        [Indexed]
         public int IdTipoGenDom { get; set; }
-        [Indexed]
         public int IdGenDom { get; set; }
     }
 
     public class rh_cat_telefonos
     {
-        [PrimaryKey,Unique]
+        [PrimaryKey,AutoIncrement]
         public int IdTelefono { get; set; }
         public string CodPais { get; set; }
         public string NumTelefono { get; set; }
         public string NumExtension { get; set; }
         public bool Principal { get; set; }
-        public string ClaveReferencia { get; set; }
+        public int ClaveReferencia { get; set; }
         public string Referencia { get; set; }
         public string FechaReg { get; set; }
         public string FechaUltMod { get; set; }
@@ -130,20 +118,24 @@ namespace Final.Models.Personas
         public string UsuarioMod { get; set; }
         public bool Activo { get; set; }
         public bool Borrado { get; set; }
-        //FK
-        [Indexed]
         public int IdTipoGenTelefono { get; set; }
-        [Indexed]
         public int IdGenTelefono { get; set; }
     }
 
-    public class rh_cat_personas_perfiles
+    public class cat_usuarios
     {
-        //FK
-        [Indexed]
-        public int IdPersona { get; set; }
-        public int IdTipGenPerfil { get; set; }
-        public int IdGenPerfil { get; set; }
+        [PrimaryKey, AutoIncrement]
+        public int IdUsuario { get; set; }
+        public string Usuario { get; set; }
+        public string Correo { get; set; }
+        public string Contrasena { get; set; }
+        public string Nombre { get; set; }
+        public string ApPaterno { get; set; }
+        public string ApMaterno { get; set; }
+        public string Sexo { get; set; }
+        public string RutaFoto { get; set; }
+        public string Alias { get; set; }
+        public string NumTelefono { get; set; }
         public string FechaReg { get; set; }
         public string FechaUltMod { get; set; }
         public string UsuarioReg { get; set; }
@@ -152,66 +144,5 @@ namespace Final.Models.Personas
         public bool Borrado { get; set; }
 
     }
-    
-    public class rh_cat_personas_datos_adicionales
-    {
-        [PrimaryKey,Unique]
-        public string Etiqueta { get; set; }
-        public string Valor { get; set; }
-        public string FechaReg { get; set; }
-        public string FechaUltMod { get; set; }
-        public string UsuarioReg { get; set; }
-        public string UsuarioMod { get; set; }
-        public bool Activo { get; set; }
-        public bool Borrado { get; set; }
-        //FK
-        [Indexed]
-        public int IdPersona { get; set; }
-        [Indexed]
-        public int IdTipoGenSeccion { get; set; }
-        [Indexed]
-        public int IdGenSeccion { get; set; }
 
-    }
-
-    public class rh_cat_personas_homologadas
-    {
-        [PrimaryKey,Unique]
-        public string RFC { get; set; }
-        public int IdPersona { get; set; }
-        public string NumControl { get; set; }
-        public string CURP { get; set; }
-        public string FechaReg { get; set; }
-        public string FechaUltMod { get; set; }
-        public string UsuarioReg { get; set; }
-        public string UsuarioMod { get; set; }
-        public bool Activo { get; set; }
-        public bool Borrado { get; set; }
-    }
-
-    public class rh_personas_perfil_estatus
-    {
-        [PrimaryKey, Unique]
-        public int IdEstatusDet { get; set; }
-        public string FechaEstatus { get; set; }
-        public bool Actual { get; set; }
-        public string Observaciones { get; set; }
-        public string FechaReg { get; set; }
-        public string FechaUltMod { get; set; }
-        public string UsuarioReg { get; set; }
-        public string UsuarioMod { get; set; }
-        public bool Activo { get; set; }
-        public bool Borrado { get; set; }
-        //FK
-        [Indexed]
-        public int IdTipoGenPerfil {get; set;}
-        [Indexed]
-        public int IdGenPerfil { get; set; }
-        [Indexed]
-        public int IdPersona { get; set; }
-        [Indexed]
-        public int IdTipoEstatus { get; set; }
-        [Indexed]
-        public int IdEstatus { get; set; }
-    }
 }

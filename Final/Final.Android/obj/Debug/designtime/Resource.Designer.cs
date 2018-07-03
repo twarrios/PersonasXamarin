@@ -26,6 +26,8 @@ namespace Final.Droid
 		
 		public static void UpdateIdValues()
 		{
+			global::Syncfusion.SfDataGrid.XForms.Droid.Resource.Layout.ScrollViewer = global::Final.Droid.Resource.Layout.ScrollViewer;
+			global::Syncfusion.SfDataGrid.XForms.Droid.Resource.String.library_name = global::Final.Droid.Resource.String.library_name;
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.actionBarSize = global::Final.Droid.Resource.Attribute.actionBarSize;
 		}
 		
@@ -2363,6 +2365,12 @@ namespace Final.Droid
 			// aapt resource value: 2131296347
 			public static int design_snackbar_background = 2131296347;
 			
+			// aapt resource value: 0
+			public static int facebook = 0;
+			
+			// aapt resource value: 0
+			public static int gmail = 0;
+			
 			// aapt resource value: 2131296340
 			public static int ic_audiotrack_dark = 2131296340;
 			
@@ -2893,6 +2901,9 @@ namespace Final.Droid
 			
 			// aapt resource value: 2131296516
 			public static int ic_vol_type_tv_light = 2131296516;
+			
+			// aapt resource value: 0
+			public static int login = 0;
 			
 			// aapt resource value: 2131296517
 			public static int mr_button_connected_dark = 2131296517;
@@ -3795,6 +3806,9 @@ namespace Final.Droid
 			// aapt resource value: 2131689478
 			public static int notification_template_part_time = 2131689478;
 			
+			// aapt resource value: 0
+			public static int ScrollViewer = 0;
+			
 			// aapt resource value: 2131689528
 			public static int select_dialog_item_material = 2131689528;
 			
@@ -3946,6 +3960,9 @@ namespace Final.Droid
 			
 			// aapt resource value: 2132082720
 			public static int character_counter_pattern = 2132082720;
+			
+			// aapt resource value: 0
+			public static int library_name = 0;
 			
 			// aapt resource value: 2132082718
 			public static int mr_button_content_description = 2132082718;

@@ -7,6 +7,7 @@ using Final.Models.Personas;
 using Final.Interfaces.Navigation;
 using Final.Interfaces.Personas;
 using System.Collections.ObjectModel;
+using Final.Views;
 
 namespace Final.ViewModels.Personas
 {
@@ -20,12 +21,12 @@ namespace Final.ViewModels.Personas
         private ICommand ficSearch;
 
         private IFicSrvNavigationCatPersonas FicLoSrvNavigationCatPersonas;
-        private IFicSrvRhCatTelefonos FicLoSrvCatPersonas;
+        private IFicSrvCatPersonas FicLoSrvCatPersonas;
 
         //FIC: Constructor
         public FicVmRhCatTelefonosList(
             IFicSrvNavigationCatPersonas ficPaSrvNavigationCatPersonas,
-            IFicSrvRhCatTelefonos ficPaSrvCatPersonas)
+            IFicSrvCatPersonas ficPaSrvCatPersonas)
         {
             //FIC: se asigna el objeto que se recibe como parametro de tipo navigation services
             FicLoSrvNavigationCatPersonas = ficPaSrvNavigationCatPersonas;
@@ -76,7 +77,7 @@ namespace Final.ViewModels.Personas
             base.OnAppearing(navigationContext);
 
             //FIC: Ejecuto uno de los metodos definidos en los servicios de Interfaz de inventarios
-            var result = await FicLoSrvCatPersonas.FicMetGetListRhCatTelefonos();
+            var result = await FicLoSrvCatPersonas.FicMetGetListRhCatTelefonos(Global.ClaveReferencia);
 
             FicMetZt_rh_cat_telefonos_Items = new ObservableCollection<rh_cat_telefonos>();
             foreach (var ficPaItem in result)
@@ -98,7 +99,7 @@ namespace Final.ViewModels.Personas
 
             if (busqueda.Equals(""))
             {
-                var result1 = await FicLoSrvCatPersonas.FicMetGetListRhCatTelefonos();
+                var result1 = await FicLoSrvCatPersonas.FicMetGetListRhCatTelefonos(Global.ClaveReferencia);
                 FicMetZt_rh_cat_telefonos_Items = new ObservableCollection<rh_cat_telefonos>();
                 foreach (var ficPaItem in result1)
                 {

@@ -1,11 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Final.Views.Personas.FicViCpRhCatDomiciliosList">
+             xmlns:syncfusion="clr-namespace:Syncfusion.SfDataGrid.XForms;assembly=Syncfusion.SfDataGrid.XForms"
+             x:Class="Final.Views.Personas.FicViCpRhCatDomiciliosList"
+             Title="Listado de Domicilios">
 
     <ContentPage.ToolbarItems>
         <ToolbarItem 
-            Name="Nuevo Producto"
+            Name="Nuevo Domicilio"
             Command="{Binding ficMetAddCommand}">
             <ToolbarItem.Icon>
                 <OnPlatform x:TypeArguments="FileImageSource">
@@ -15,48 +17,66 @@
             </ToolbarItem.Icon>
         </ToolbarItem>
     </ContentPage.ToolbarItems>
-    <ListView 
-        ItemsSource="{Binding FicMetZt_cat_personas_Items}"
-        SelectedItem="{Binding FicMetZt_cat_personas_SelectedItem, Mode=TwoWay}">
-        <ListView.Footer>
-            <SearchBar Placeholder="busqueda" Text="{Binding busqueda}" SearchCommand="{Binding ficMetSearch}"></SearchBar>
-        </ListView.Footer>
-        <ListView.ItemTemplate>
-            <DataTemplate>
-                <ViewCell>
-                    <ViewCell.View>
-                        <StackLayout
-                            Padding="0,0,0,0"
-                            Orientation="Horizontal"
-                            >
-                        <Label 
-                                Text="{Binding NumControl}"
-                                VerticalTextAlignment="Center"
-                                HorizontalOptions="CenterAndExpand" />
 
-                        <Label 
-                                Text="{Binding RFC}"
-                                VerticalTextAlignment="Center"
-                                HorizontalOptions="CenterAndExpand" />
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
 
-                        <Label 
-                                Text="{Binding CURP}"
-                                VerticalTextAlignment="Center"
-                                HorizontalOptions="CenterAndExpand" />
+            <SearchBar 
+           x:Name="SearchBar"
+           Grid.Row="0"
+           Grid.Column="0"
+           Placeholder="Buscar"
+           PlaceholderColor="Red"
+           FontAttributes="Italic"
+           Text="{Binding busqueda}" 
+           SearchCommand="{Binding ficMetSearch}"/>
 
-                            <Image  HorizontalOptions="CenterAndExpand"
-                                   WidthRequest="40"
-                                   HeightRequest="40"
-                                   Source="Assets/425393.jpg"/>
+            <syncfusion:SfDataGrid x:Name="dataGrid"
+                               VerticalOptions="FillAndExpand"
+                               ColumnSizer="Star"
+                               AutoGenerateColumns="False"
+                               AllowSorting="False"
+                               ItemsSource="{Binding FicMetZt_rh_cat_domicilios_Items}"
+                               SelectedItem="{Binding FicMetZt_rh_cat_domicilios_SelectedItem, Mode=TwoWay}"
+                               SelectionMode="Single"
+                               ScrollingMode="Line"
+                               >
 
-                        <Label 
-                                Text="{Binding IdPersona}"
-                                VerticalTextAlignment="Center"
-                                HorizontalOptions="CenterAndExpand" />
-                    </StackLayout>
-                </ViewCell.View>
-                </ViewCell>
-            </DataTemplate>
-        </ListView.ItemTemplate>
-    </ListView>
+                <syncfusion:SfDataGrid.Columns x:TypeArguments="syncfusion:Columns">
+
+                    <syncfusion:GridTextColumn HeaderText="ID"
+                                           HeaderFontAttribute="Bold"
+                                           HeaderCellTextSize="25"
+                                           MappingName="IdDomicilio" />
+
+                    <syncfusion:GridTextColumn HeaderText="DOMICILIO"
+                                           HeaderFontAttribute="Bold"
+                                           HeaderCellTextSize="25"
+                                           MappingName="Domicilio" />
+
+                    <syncfusion:GridTextColumn HeaderText="CÓDIGO POSTAL"
+                                           HeaderFontAttribute="Bold"
+                                           HeaderCellTextSize="25"
+                                           MappingName="CodigoPostal" />
+
+                    <syncfusion:GridSwitchColumn HeaderText="PRINCIPAL"
+                                           HeaderFontAttribute="Bold"
+                                           HeaderCellTextSize="25"
+                                           MappingName="Principal" />
+
+                    <syncfusion:GridTextColumn HeaderText="PAIS"
+                                           HeaderFontAttribute="Bold"
+                                           HeaderCellTextSize="25"
+                                           MappingName="Pais" />
+
+                    <syncfusion:GridTextColumn HeaderText="ESTADO"
+                                           HeaderFontAttribute="Bold"
+                                           HeaderCellTextSize="25"
+                                           MappingName="Estado" />
+
+                </syncfusion:SfDataGrid.Columns>
+
+            </syncfusion:SfDataGrid>
+        </StackLayout>
+    </ContentPage.Content>
 </ContentPage>

@@ -7,11 +7,17 @@
         Padding="20"
         x:Name="stack">
 
-        <Label Text="IdPerona" IsVisible="False"/>
+        <Entry x:Name="IdUsuario" IsEnabled="False"/>
+        <Label Text="IdPersona" IsVisible="False"/>
         <Entry Text="{Binding Item.IdPersona}" IsVisible="False"/>
 
         <Label Text="IdInstituto" />
-        <Entry Text="{Binding Item.IdInstituto}"/>
+        <Picker
+            SelectedItem="{Binding SelectedInstituto}"
+            ItemsSource="{Binding FicMetItemsInstituto}"
+            ItemDisplayBinding="{Binding Alias}"/>
+        
+        <Entry Text="{Binding SelectedInstituto.IdInstituto}" />
 
         <Label Text="Numero de Control" />
         <Entry Text="{Binding Item.NumControl}"/>
@@ -31,35 +37,36 @@
         <Label Text="CURP" />
         <Entry Text="{Binding Item.CURP}"/>
 
-        <Label Text="FechaNac" />
+        <Label Text="Fecha Nacimiento" />
         <Entry Text="{Binding Item.FechaNac}"/>
 
         <Label Text="TipoPersona" />
-        <Switch IsToggled="{Binding Item.TipoPerona}"/>
+        <Picker x:Name="TP"/>
+        <Entry Text="{Binding Item.TipoPersona}" x:Name="etp" />
 
         <Label Text="Sexo" />
-        <Switch IsToggled="{Binding Item.Sexo}"/>
+        <Picker x:Name="Sex"/>
+        <Entry Text="{Binding Item.Sexo}" x:Name="esex" />
 
         <Label Text="RutaFoto" />
-        <Entry Text="{Binding Item.RutaFoto}" IsEnabled="False"/>
+        <Entry Text="{Binding Item.RutaFoto}" x:Name="rutaf"/>
 
-        <Button Text="Cargar" Command="{Binding }"/>
+        <Button Text="Cargar" x:Name="cargafoto"/>
+
+        <Image x:Name="img"></Image>
 
         <Label Text="Alias" />
         <Entry Text="{Binding Item.Alias}"/>
 
-        <Label Text="IdTipoGenOcupacion" />
-        <Entry Text="{Binding Item.IdTipoGenOcupacion}"/>
 
         <Label Text="IdGenOcupacion" />
-        <Entry Text="{Binding Item.IdGenOcupacion}"/>
-
-        <Label Text="IdTipoGenEstadoCivil" />
-        <Entry Text="{Binding Item.IdTipoGenEstadoCivil}"/>
+        <Picker x:Name="GenOcupacion"/>
+        <Entry Text="{Binding IdGenOcupacion}" x:Name="uno" />
 
         <Label Text="IdGenEstadoCivil" />
-        <Entry Text="{Binding Item.IdGenEstadoCivil}"/>
-
+        <Picker x:Name="GenEstadoCivil"/>
+        <Entry Text="{Binding IdGenEstadoCivil}" x:Name="dos" />
+        
         <Label Text="Fecha Registro" IsVisible="False"/>
         <Entry Text="{Binding Item.FechaReg}" IsVisible="False"/>
 

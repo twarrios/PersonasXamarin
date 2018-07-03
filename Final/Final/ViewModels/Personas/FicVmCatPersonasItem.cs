@@ -7,17 +7,20 @@ using Final.Models.Personas;
 using Final.Interfaces.Navigation;
 using Final.Interfaces.Personas;
 using Windows.Storage;
+using System.Collections.ObjectModel;
 
 namespace Final.ViewModels.Personas
 {
     public class FicVmCatPersonasItem : FicViewModelBase
     {
         private cat_personas Fic_Zt_Cat_Personas_Item;
+        private ObservableCollection<cat_institutos> Fic_Items_Instituto;
+        private cat_institutos Fic_Item_Instituto;
 
         private ICommand FicSaveCommand;
         private ICommand FicDeleteCommand;
         private ICommand FicCancelCommand;
-        private ICommand FicSaveImgCommand;
+     
 
         private IFicSrvNavigationCatPersonas FicLoSrvNavigationCatPersonas;
         private IFicSrvCatPersonas FicLoSrvCatPersonas;
@@ -32,9 +35,11 @@ namespace Final.ViewModels.Personas
             FicLoSrvCatPersonas = FicPaSrvCatPersonas;
         }
 
+
         public cat_personas Item
         {
-            get { return Fic_Zt_Cat_Personas_Item; }
+            get {
+                return Fic_Zt_Cat_Personas_Item; }
             set
             {
                 Fic_Zt_Cat_Personas_Item = value;
@@ -42,9 +47,24 @@ namespace Final.ViewModels.Personas
             }
         }
 
-        public ICommand FicMetSaveImgCommand
+        public ObservableCollection<cat_institutos> FicMetItemsInstituto
         {
-            get { return FicSaveImgCommand = FicSaveImgCommand ?? new FicVmDelegateCommand(UploadImg); }
+            get { return Fic_Items_Instituto; }
+            set
+            {
+                Fic_Items_Instituto = value;
+                RaisePropertyChanged();
+            }
+        }
+
+        public cat_institutos SelectedInstituto
+        {
+            get { return Fic_Item_Instituto; }
+            set
+            {
+                Fic_Item_Instituto = value;
+                RaisePropertyChanged();
+            }
         }
         public ICommand FicMetSaveCommand
         {
@@ -61,7 +81,7 @@ namespace Final.ViewModels.Personas
             get { return FicCancelCommand = FicCancelCommand ?? new FicVmDelegateCommand(CancelCommandExecute); }
         }
 
-        public override void OnAppearing(object FicPaNavigationContext)
+        public  async override void OnAppearing(object FicPaNavigationContext)
         {
             var FicLoZt_inventarios = FicPaNavigationContext as cat_personas;
 
@@ -70,13 +90,24 @@ namespace Final.ViewModels.Personas
                 Item = FicLoZt_inventarios;
             }
 
+            var result = await FicLoSrvCatPersonas.FicMetGetListInstitutos();
+
+            FicMetItemsInstituto = new ObservableCollection<cat_institutos>();
+            foreach (var ficPaItem in result)
+            {
+                FicMetItemsInstituto.Add(ficPaItem);
+            }
+
+            var resultCedi = await FicLoSrvCatPersonas.FitMetGetInstituto(FicLoZt_inventarios);
+            SelectedInstituto = new cat_institutos();
+            if (resultCedi != null)
+            {
+                SelectedInstituto = resultCedi;
+            }
+
             base.OnAppearing(FicPaNavigationContext);
         }
 
-        private async void UploadImg()
-        {
-           
-        }
 
         private async void SaveCommandExecute()
         {

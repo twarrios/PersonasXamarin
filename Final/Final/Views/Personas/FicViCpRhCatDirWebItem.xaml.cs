@@ -20,25 +20,46 @@ namespace Final.Views.Personas
 
             FicLoParameter = ficPaParameter;
 
-            BindingContext = App.FicMetLocator.FicVmCatPersonasItem;
+            BindingContext = App.FicMetLocator.FicVmRhCatDirWebItem;
 
             var layout = stack;
             var scroll = new ScrollView { Content = layout };
             Content = scroll;
 
-           // img.Source = ImageSource.FromUri(new Uri("https://xamarin.com/content/images/pages/forms/example-app.png"));
+            Dictionary<int, string> lista = new Dictionary<int, string>();
+            lista.Add(44, "Faceboook");
+            lista.Add(45, "Google +");
+            lista.Add(46, "Twitter");
+            lista.Add(47, "Youtube");
+            lista.Add(48, "Instagram");
+            lista.Add(49, "Otro");
+
+            
+            foreach(var item in lista.Values)
+            {
+                GenDirWeb.Items.Add(item);
+            }
+
+            GenDirWeb.SelectedIndexChanged += (sender, args) =>
+            {
+
+                uno.Text = (GenDirWeb.SelectedIndex + 44).ToString();
+
+            };
+
+         
 
         }
         protected override void OnAppearing()
         {
             //FIC: Aqui se declara una variable de tipo ViewModel Item
-            var FicViewModel = BindingContext as FicVmCatPersonasItem;
+            var FicViewModel = BindingContext as FicVmRhCatDirWebItem;
             if (FicViewModel != null) FicViewModel.OnAppearing(FicLoParameter);
         }
 
         protected override void OnDisappearing()
         {
-            var FicViewModel = BindingContext as FicVmCatPersonasItem;
+            var FicViewModel = BindingContext as FicVmRhCatDirWebItem;
             if (FicViewModel != null) FicViewModel.OnDisappearing();
         }
     }

@@ -6,6 +6,6 @@ namespace Final
 {
     public class AppSettings
     {
-        public static string ficDatabaseName = "PersonasBD.db3";
+        public static string ficDatabaseName = "PersonasBD11.db3";
     }
 }

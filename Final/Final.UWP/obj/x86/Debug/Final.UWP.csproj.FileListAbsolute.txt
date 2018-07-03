@@ -10,6 +10,10 @@ C:\Users\twarrios\source\repos\Final\Final\Final.UWP\bin\x86\Debug\Core\AppxMani
 C:\Users\twarrios\source\repos\Final\Final\Final.UWP\bin\x86\Debug\Core\Final.UWP.exe
 C:\Users\twarrios\source\repos\Final\Final\Final.UWP\bin\x86\Debug\Final.UWP.build.appxrecipe
 C:\Users\twarrios\source\repos\Final\Final\Final.UWP\bin\x86\Debug\Autofac.dll
+C:\Users\twarrios\source\repos\Final\Final\Final.UWP\bin\x86\Debug\MailKit.dll
+C:\Users\twarrios\source\repos\Final\Final\Final.UWP\bin\x86\Debug\MimeKit.dll
+C:\Users\twarrios\source\repos\Final\Final\Final.UWP\bin\x86\Debug\Plugin.Permissions.dll
+C:\Users\twarrios\source\repos\Final\Final\Final.UWP\bin\x86\Debug\BouncyCastle.Crypto.dll
 C:\Users\twarrios\source\repos\Final\Final\Final.UWP\bin\x86\Debug\clrcompression.dll
 C:\Users\twarrios\source\repos\Final\Final\Final.UWP\bin\x86\Debug\Microsoft.CSharp.dll
 C:\Users\twarrios\source\repos\Final\Final\Final.UWP\bin\x86\Debug\Microsoft.VisualBasic.dll
@@ -180,6 +184,16 @@ C:\Users\twarrios\source\repos\Final\Final\Final.UWP\bin\x86\Debug\SQLitePCLRaw.
 C:\Users\twarrios\source\repos\Final\Final\Final.UWP\bin\x86\Debug\SQLitePCLRaw.batteries_v2.dll
 C:\Users\twarrios\source\repos\Final\Final\Final.UWP\bin\x86\Debug\SQLitePCLRaw.core.dll
 C:\Users\twarrios\source\repos\Final\Final\Final.UWP\bin\x86\Debug\SQLitePCLRaw.provider.e_sqlite3.dll
+C:\Users\twarrios\source\repos\Final\Final\Final.UWP\bin\x86\Debug\Syncfusion.Core.XForms.dll
+C:\Users\twarrios\source\repos\Final\Final\Final.UWP\bin\x86\Debug\Syncfusion.GridCommon.Portable.dll
+C:\Users\twarrios\source\repos\Final\Final\Final.UWP\bin\x86\Debug\Syncfusion.Data.Portable.dll
+C:\Users\twarrios\source\repos\Final\Final\Final.UWP\bin\x86\Debug\Syncfusion.SfDataGrid.XForms.UWP.dll
+C:\Users\twarrios\source\repos\Final\Final\Final.UWP\bin\x86\Debug\Syncfusion.SfDataGrid.XForms.dll
+C:\Users\twarrios\source\repos\Final\Final\Final.UWP\bin\x86\Debug\Syncfusion.SfInput.UWP.dll
+C:\Users\twarrios\source\repos\Final\Final\Final.UWP\bin\x86\Debug\Syncfusion.SfNumericTextBox.XForms.UWP.dll
+C:\Users\twarrios\source\repos\Final\Final\Final.UWP\bin\x86\Debug\Syncfusion.SfNumericTextBox.XForms.dll
+C:\Users\twarrios\source\repos\Final\Final\Final.UWP\bin\x86\Debug\Syncfusion.SfShared.UWP.dll
+C:\Users\twarrios\source\repos\Final\Final\Final.UWP\bin\x86\Debug\Plugin.Media.dll
 C:\Users\twarrios\source\repos\Final\Final\Final.UWP\bin\x86\Debug\Xamarin.Forms.Core.dll
 C:\Users\twarrios\source\repos\Final\Final\Final.UWP\bin\x86\Debug\Xamarin.Forms.Platform.UAP.dll
 C:\Users\twarrios\source\repos\Final\Final\Final.UWP\bin\x86\Debug\Xamarin.Forms.Platform.dll
@@ -339,5 +353,9 @@ C:\Users\twarrios\source\repos\Final\Final\Final.UWP\obj\x86\Debug\pri.resfiles.
 C:\Users\twarrios\source\repos\Final\Final\Final.UWP\obj\x86\Debug\qualifiers.txt
 C:\Users\twarrios\source\repos\Final\Final\Final.UWP\obj\x86\Debug\qualifiers.txt.intermediate
 C:\Users\twarrios\source\repos\Final\Final\Final.UWP\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
+C:\Users\twarrios\source\repos\Final\Final\Final.UWP\obj\x86\Debug\Plugin.Permissions.pri.xml
+C:\Users\twarrios\source\repos\Final\Final\Final.UWP\obj\x86\Debug\Syncfusion.SfInput.UWP.pri.xml
+C:\Users\twarrios\source\repos\Final\Final\Final.UWP\obj\x86\Debug\Syncfusion.SfShared.UWP.pri.xml
+C:\Users\twarrios\source\repos\Final\Final\Final.UWP\obj\x86\Debug\Plugin.Media.pri.xml
 C:\Users\twarrios\source\repos\Final\Final\Final.UWP\obj\x86\Debug\Xamarin.Forms.Platform.UAP.pri.xml
 C:\Users\twarrios\source\repos\Final\Final\Final.UWP\obj\x86\Debug\ProjectArchitectures.txt
